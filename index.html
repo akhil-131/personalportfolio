@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akhil Tangila - AI Engineer</title>
+    <meta name="description"
+        content="Personal portfolio of Akhil Tangila - AI & ML student, AI Engineer, and creative technologist" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-80" style="background: rgba(15,15,30,0.8);">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold font-space gradient-text">Tangila Akhil</div>
+                <div class="flex items-center gap-8">
+                    <a href="#home" class="nav-link active text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium">About</a>
+                    <a href="#skills" class="nav-link text-sm font-medium">Skills</a>
+                    <a href="#projects" class="nav-link text-sm font-medium">Projects</a>
+                    <a href="#certificates" class="nav-link text-sm font-medium">Certificates</a>
+                    <a href="#contact" class="nav-link text-sm font-medium">Contact</a>
+                    <button id="themeToggle" class="p-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all"
+                        aria-label="Toggle theme">
+                        <svg id="sunIcon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <svg id="moonIcon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-full flex items-center justify-center px-6 pt-20">
+        <!-- Animated Blobs (unchanged for background ambiance) -->
+        <div class="blob" style="width: 400px; height: 400px; background: #a855f7; top: 10%; left: 10%;"></div>
+        <div class="blob"
+            style="width: 300px; height: 300px; background: #ec4899; bottom: 20%; right: 15%; animation-delay: -5s;">
+        </div>
+        <div class="blob"
+            style="width: 350px; height: 350px; background: #8b5cf6; top: 50%; right: 20%; animation-delay: -10s;">
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <!-- Left: intro + chips -->
+                <div class="text-center md:text-left">
+                    <div class="fade-in" style="animation-delay: 0.2s;">
+                        <p class="text-purple-400 text-sm font-medium mb-3">👋 Hi! I'm</p>
+                        <h1 id="heroName" class="text-4xl md:text-5xl font-bold font-space mb-3 leading-tight"></h1>
+                        <p id="heroTagline" class="text-lg md:text-xl text-gray-400 mb-6"></p>
+                    </div>
+                    <!-- 🌟 Hero Tagline Section -->
+                    <div class="fade-in mb-8 min-h-[64px]" style="animation-delay: 0.35s;">
+                        <p id="rotatingText" class="text-xl md:text-2xl font-medium gradient-text"></p>
+                    </div>
+                    <div class="fade-in flex flex-wrap md:justify-start justify-center gap-3 mb-8"
+                        style="animation-delay: 0.5s;">
+                        <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Fullstack Developer</span>
+                        <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">AI Engineer</span>
+                        <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Creator</span>
+                        <span class="skill-tag px-4 py-2 rounded-full text-sm font-medium">Gamer</span>
+                    </div>
+                    <div class="fade-in flex md:justify-start justify-center gap-4" style="animation-delay: 0.65s;">
+                        <a href="#projects"
+                            class="btn-primary px-7 py-3 rounded-full font-medium text-white relative z-10">View My
+                            Work</a>
+                        <a href="#contact"
+                            class="px-7 py-3 rounded-full font-medium border-2 border-purple-500 hover:bg-purple-500 hover:bg-opacity-10 transition-all">Get
+                            In Touch</a>
+                    </div>
+                </div>
+                <!-- Right: 3D Animation -->
+                <div class="flex justify-center md:justify-end fade-in" style="animation-delay: 0.8s;">
+                    <div class="cube-container">
+                        <div class="cube">
+                            <div class="face front"></div>
+                            <div class="face back"></div>
+                            <div class="face right"></div>
+                            <div class="face left"></div>
+                            <div class="face top"></div>
+                            <div class="face bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold font-space mb-16 text-center">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="relative w-96 h-96 mx-auto">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full transform rotate-6">
+                        </div>
+                        <div class="relative bg-gray-800 rounded-full w-full h-full flex items-center justify-center">
+                            <img src="images/akki-ggu-Tshirt-lib.jpg" alt="Akki - Profile Picture"
+                                class="w-full h-full object-cover rounded-full">
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in space-y-6" style="animation-delay: 0.2s;">
+                    <p id="shortBio" class="text-lg leading-relaxed"></p>
+                    <p id="longBio" class="text-gray-400 leading-relaxed"></p>
+                    <div class="pt-6">
+                        <h3 class="text-xl font-semibold mb-4 gradient-text">Education</h3>
+                        <div class="glow-card rounded-2xl p-6">
+                            <p class="font-semibold text-lg">Godavari Global University , Rajahmundry</p>
+                            <p class="text-purple-400">CSE (AI & ML) - 2nd Year</p>
+                            <p class="text-sm text-gray-400 mt-2">2024 - 2028 | CGPA: 8.6</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <h3 class="text-xl font-semibold mb-4 gradient-text">Achievements</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3"><span class="text-2xl">🏆</span>
+                                <p>GeeksforGeeks - Python Beginner to Advanced, POTD 80+ streak</p>
+                            </div>
+                            <div class="flex items-center gap-3"><span class="text-2xl">💻</span>
+                                <p>LeetCode - 120+Days streak</p>
+                            </div>
+                            <div class="flex items-center gap-3"><span class="text-2xl">🎯</span>
+                                <p>CodeChef - 80+Days streak</p>
+                            </div>
+                            <div class="flex items-center gap-3"><span class="text-2xl">🟩</span>
+                                <p>HackerRank - 50+ problems solved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center fade-in" style="animation-delay: 0.4s;">
+                <p id="quoteText" class="text-2xl font-medium italic gradient-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consolidated Skills & Technologies Section -->
+    <section id="skills" class="py-24 px-6 bg-white bg-opacity-5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold font-space mb-16 text-center">Skills & Technologies
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glow-card project-card rounded-2xl p-8 fade-in">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="text-xl font-semibold mb-4">Artificial Intelligence & Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Deep Learning</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">NLP </span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Computer Vision</span>
+                    </div>
+                </div>
+                <div class="glow-card project-card rounded-2xl p-8 fade-in" style="animation-delay: 0.2s;">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="text-xl font-semibold mb-4">Frontend Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">React.js </span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Next.js</span>
+                    </div>
+                </div>
+                <div class="glow-card project-card rounded-2xl p-8 fade-in" style="animation-delay: 0.3s;">
+                    <div class="text-4xl mb-4">🛠️</div>
+                    <h3 class="text-xl font-semibold mb-4">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Git & GitHub</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">VS Code</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Google Colab</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Vercel</span>
+
+                    </div>
+                </div>
+                <div class="glow-card project-card rounded-2xl p-8 fade-in" style="animation-delay: 0.4s;">
+                    <div class="text-4xl mb-4">🗄️</div>
+                    <h3 class="text-xl font-semibold mb-4">Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">MySQL</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Firebase</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">SQLite</span>
+                    </div>
+                </div>
+                <!-- New Backend Development Card -->
+                <div class="glow-card project-card rounded-2xl p-8 fade-in" style="animation-delay: 0.5s;">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-semibold mb-4">Backend Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Node.js&Express.js</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Flask/FastAPI</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Spring Boot</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Render/Vercel/AWS</span>
+                    </div>
+                </div>
+                <!-- New Programming Languages Card -->
+                <div class="glow-card project-card rounded-2xl p-8 fade-in" style="animation-delay: 0.6s;">
+                    <div class="text-4xl mb-4">💾</div>
+                    <h3 class="text-xl font-semibold mb-4">Programming Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">C</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Java</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">OOPs</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-sm">DSA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold font-space mb-16 text-center">Our Team Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glow-card project-card rounded-2xl p-8 fade-in">
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="text-2xl font-semibold mb-3">ASK GGU- AI Chatbot</h3>
+                    <p class="text-gray-400 mb-6">Developed ASK GGU, an AI-powered chatbot offering text, voice, image
+                        generation, and document summarization features for an interactive student assistance
+                        experience.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">HTML ,CSS ,Java Script</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">Python</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">SQLite</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="http://ask-ggu.vercel.app"
+                            class="btn-primary px-6 py-2 rounded-lg text-sm font-medium text-white relative z-10 inline-block">View
+                            Live</a>
+                    </div>
+                </div>
+                <div class="glow-card project-card rounded-2xl p-8 fade-in" style="animation-delay: 0.2s;">
+                    <div class="text-4xl mb-4">📄</div>
+                    <h3 class="text-2xl font-semibold mb-3">HireMe(AI-Based Resume Screening)</h3>
+                    <p class="text-gray-400 mb-6">Developed HireMe, an AI-driven web application that automates resume
+                        screening and candidate selection. It analyzes resumes, extracts key skills, and matches them
+                        with job requirements to assist recruiters in shortlisting candidates efficiently.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">HTML ,CSS ,Java Script</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">Python</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">SQLite</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="http://hireme-ai.vercel.app"
+                            class="btn-primary px-6 py-2 rounded-lg text-sm font-medium text-white relative z-10 inline-block">View
+                            Live</a>
+                    </div>
+                </div>
+
+                <div class="glow-card project-card rounded-2xl p-8 fade-in" style="animation-delay: 0.3s;">
+                    <div class="text-4xl mb-4">🧮</div>
+                    <h3 class="text-2xl font-semibold mb-3">Smart Calculator</h3>
+                    <p class="text-gray-400 mb-6">Developed a responsive and user-friendly smart calculator with
+                        real-time validation and smooth calculation features..</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">HTML</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">CSS</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">Java Script</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="http://smart-calculator-gilt.vercel.app"
+                            class="btn-primary px-6 py-2 rounded-lg text-sm font-medium text-white relative z-10 inline-block">View
+                            Live</a>
+                    </div>
+                </div>
+
+                <div class="glow-card project-card rounded-2xl p-8 fade-in" style="animation-delay: 0.3s;">
+                    <div class="text-4xl mb-4">🗣️</div>
+                    <h3 class="text-2xl font-semibold mb-3">Vina raa mataaa(Real-Time Chatting Website)</h3>
+                    <p class="text-gray-400 mb-6">Developed a real-time chatting website that allows users to join or
+                        create chat rooms using a nickname and room PIN for secure and interactive communication.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">HTML,CSS</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">Java Script</span>
+                        <span class="skill-tag px-3 py-1 rounded-full text-xs">Firebase</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="vina-raa-mataaa.vercel.app"
+                            class="btn-primary px-6 py-2 rounded-lg text-sm font-medium text-white relative z-10 inline-block">View
+                            Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-24 px-6 bg-white bg-opacity-5">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold font-space mb-16 text-center">
+                Certificates
+            </h2>
+
+            <!-- Certificates Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- First Certificate -->
+                <div class="glow-card rounded-2xl p-4 bg-gray-900 bg-opacity-20 border border-gray-700 aspect-[11/8]">
+                    <img src="images/CCcertificate500.png" alt="Certificate 1"
+                        class="w-full h-[70%] block rounded-xl object-contain" />
+                    <div class="mt-4 text-center">
+                        <h3 class="text-lg font-semibold mb-2 text-white">
+                            CodeChef Certificate – Problem Solving (Rating: 500)
+                        </h3>
+                        <p class="text-gray-400 text-sm">
+                            Awarded by CodeChef for solving challenging programming problems
+                            and demonstrating strong analytical and coding skills.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Second Certificate -->
+                <div class="glow-card rounded-2xl p-4 bg-gray-900 bg-opacity-20 border border-gray-700 aspect-[4/3]">
+                    <img src="images/HRcetificate-py.png" alt="Certificate 2"
+                        class="w-full h-[70%] block rounded-xl object-contain" />
+                    <div class="mt-4 text-center">
+                        <h3 class="text-lg font-semibold mb-2 text-white">
+                            HackerRank Certificate – Python (Basic)
+                        </h3>
+                        <p class="text-gray-400 text-sm">
+                            Certified by HackerRank for demonstrating fundamental programming
+                            skills and problem-solving ability in Python.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Funny Animated Certificate Line (Centered) -->
+            <div class="flex justify-center items-center mt-16">
+                <p
+                    class="animate-cook text-center text-2xl font-semibold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-transparent bg-clip-text animate-gradient">
+                    New certificates cooking in the digital kitchen...
+                </p>
+            </div>
+        </div>
+
+
+
+
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-white bg-opacity-5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="section-title text-4xl md:text-5xl font-bold font-space mb-16 text-center">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-6">Let's Connect</h3>
+                    <p class="text-gray-400 mb-8">Feel free to reach out for collaborations, opportunities, or just a
+                        friendly chat about AI and technology!</p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-purple-500 bg-opacity-20 flex items-center justify-center">
+                                <span class="text-xl">📧</span>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">Email</p>
+                                <p id="emailAddress" class="font-medium">akhiltangila131@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-purple-500 bg-opacity-20 flex items-center justify-center">
+                                <span class="text-xl">📱</span>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">Phone</p>
+                                <p id="phoneNumber" class="font-medium"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/akhil-131?tab=repositories" target="_blank" rel="noopener noreferrer"
+                            class="social-icon w-12 h-12 rounded-full bg-purple-500 bg-opacity-20 flex items-center justify-center hover:bg-opacity-30">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tangila-akhil-399233362/" target="_blank" rel="noopener noreferrer"
+                            class="social-icon w-12 h-12 rounded-full bg-purple-500 bg-opacity-20 flex items-center justify-center hover:bg-opacity-30">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="https://x.com/akhil_tangila" target="_blank" rel="noopener noreferrer"
+                            class="social-icon w-12 h-12 rounded-full bg-purple-500 bg-opacity-20 flex items-center justify-center hover:bg-opacity-30">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/mr.handsome_144/" target="_blank" rel="noopener noreferrer"
+                            class="social-icon w-12 h-12 rounded-full bg-purple-500 bg-opacity-20 flex items-center justify-center hover:bg-opacity-30">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.58 12.1-9.77 12.1-9.77 12.1s-10.35 0-9.77-12.1c.148-3.228 1.667-4.771 4.919-4.919 1.266-.058 1.645-.07 4.85-.07zm0 3.675c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm6.406-1.683c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.439-.645 1.439-1.44-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="fade-in" style="animation-delay: 0.2s;">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="space-y-6">
+                        <input type="hidden" name="access_key" value="cfc86307-d6ef-462c-a5de-a59f1c0e26e4" />
+                        <input type="hidden" name="subject" value="New Contact Form Submission" />
+                        <input type="hidden" name="from_name" value="Contact Form, Your Website" />
+                        <input type="checkbox" name="_captcha" style="display: none;" />
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg"
+                                placeholder="Your name" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg"
+                                placeholder="your.email@example.com" />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" required rows="5"
+                                class="w-full px-4 py-3 rounded-lg resize-none"
+                                placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="btn-primary w-full py-4 rounded-lg font-medium text-white relative z-10">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-white border-opacity-10">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400">© 2025 Akhil Tangila. Made with ❤️ and lots of coffee..</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
